@@ -1,26 +1,242 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
+  --primary-color: #DCFF5F;
+  --primary-font-size: 70px;
+  --secondary-font-size: 50px;
+  --button-font-size: 20px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary-color);
+  --font-size-primary: var(--primary-font-size);
+  --font-size-secondary: var(--secondary-font-size);
+  --font-size-button: var(--button-font-size);
+  --font-clashDisplay: var(--font-clashDisplay);
+  --font-satoshi: var(--font-satoshi);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+  text-transform: lowercase !important;
+}
+
+@layer utilities {
+
+  .services-content{
+    backdrop-filter: blur(10px);
+  }
+
+  .characters {
+    position: relative;
+    font-size: 20rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.2);
+    /* text slightly visible */
+    display: inline-block;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+  }
+
+  .characters span {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Glow inside text */
+  .characters::before {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(160px circle at var(--x, 50%) var(--y, 50%),
+        rgba(255, 255, 255, 0.8),
+        transparent 40%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: 1;
+    opacity: 0;
+    /* hidden by default */
+    transition: opacity 0.2s ease;
+  }
+
+  .characters:hover::before {
+    opacity: 1;
+  }
+
+
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .section-border {
+    margin-top: -22%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-bottom: 1px solid transparent;
+    background: linear-gradient(180deg, #292639 50%, #111111 94%) padding-box,
+      linear-gradient(to top, #B7A9F4, #1f1d2800) border-box;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Container */
+.grid-background {
+  position: absolute;
+  width: 100%;
+  height: 58%;
+  overflow: hidden;
+  bottom: 0;
+}
+
+/* -------------------------- */
+/*      VERTICAL GRID LINES    */
+/* -------------------------- */
+
+.v-lines {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.v-line {
+  position: relative;
+  width: 1px;
+  margin: 0 auto;
+  height: 100%;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.08) 40%,
+      rgba(255, 255, 255, 0.04) 100%);
+}
+
+/* Drop (shooting streak) */
+.drop {
+  position: absolute;
+  bottom: 0;
+  left: -1.5px;
+  width: 4px;
+  height: 40px;
+
+  background: linear-gradient(to bottom,
+      rgba(130, 94, 255, 1) 0%,
+      rgba(130, 94, 255, 0.3) 60%,
+      rgba(130, 94, 255, 0) 100%);
+
+  border-radius: 50% / 100%;
+
+  filter: drop-shadow(0 0 6px #b99aff);
+
+  animation: moveUp 2s linear infinite;
+}
+
+/* -------------------------- */
+/*      HORIZONTAL GRID LINES  */
+/* -------------------------- */
+
+.h-lines {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+  gap: 8rem;
+}
+
+.h-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.04) 100%);
+}
+
+/* -------------------------- */
+/*      DROP ANIMATION         */
+/* -------------------------- */
+
+@keyframes moveUp {
+  0% {
+    bottom: 0;
+    opacity: 0;
+    transform: scaleY(0.5);
+  }
+
+  10% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  100% {
+    bottom: 100%;
+    opacity: 0;
+    transform: scaleY(0.5);
+  }
 }
