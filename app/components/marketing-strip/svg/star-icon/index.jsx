@@ -1,7 +1,7 @@
 const StarIcon = ({ className, ...props }) => {
     return (
         <svg
-            className={className}
+            className={`max-lg:w-[30px] ${className}`}
             width={52}
             height={52}
             viewBox="0 0 52 52"

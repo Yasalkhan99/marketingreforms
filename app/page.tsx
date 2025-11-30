@@ -6,6 +6,7 @@ import AboutUs from "@/components/about-us";
 import YourGoals from "@/components/your-goals";
 import BrandsStrip from "@/components/brands-strip";
 import Services from "@/components/services";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <YourGoals />
       <BrandsStrip />
       <Services />
+      <MarketingStrip />
+      <Footer/>
     </>
   );
 }

@@ -64,7 +64,7 @@ const AboutUs = () => {
                         alignItems: "center",
                     }}
                 >
-                    <PointerGlowText text="About Us" />
+                    <PointerGlowText text="About Us" className="2xl:!text-[150px]"/>
                 </div>
             </div>
             <div className="container relative z-20">

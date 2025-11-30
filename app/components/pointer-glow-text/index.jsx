@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const PointerGlowText = ({ text }) => {
+const PointerGlowText = ({ text, className }) => {
   const ref = useRef(null);
 
   const handlePointerMove = (e) => {
@@ -14,7 +14,7 @@ const PointerGlowText = ({ text }) => {
 
   return (
     <div
-      className="characters"
+      className={`characters ${className}`}
       ref={ref}
       onPointerMove={handlePointerMove}
       data-text={text}
