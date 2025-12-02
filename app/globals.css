@@ -38,7 +38,17 @@ span {
 
 @layer utilities {
 
-  .services-content{
+  .arrow-icon-container {
+    display: none;
+    transition: display 0.3s ease-in, max-width 0.3s ease-in, padding 0.3s ease-in;
+  }
+
+  /* Hover state (Visible) */
+  .service-box:hover .arrow-icon-container {
+    display: block;
+  }
+
+  .services-content {
     backdrop-filter: blur(10px);
   }
 
