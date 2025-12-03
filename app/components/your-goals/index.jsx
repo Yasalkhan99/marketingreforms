@@ -4,6 +4,9 @@ import QualityInsuraceIcon from "./svg/quality-insurace-icon";
 import CreativityIcon from "./svg/creativity-icon";
 import AttentionIcon from "./svg/attention-icon";
 import DeliveryIcon from "./svg/delivery-icon";
+import Grow01 from "./svg/grow-01";
+import Grow02 from "./svg/grow-02";
+import Grow03 from "./svg/grow-03";
 
 const YourGoals = () => {
     return (
@@ -20,13 +23,16 @@ const YourGoals = () => {
                 </div>
                 <div className="grid grid-cols-12 gap-4">
                     <div className="col-span-4">
-                        <div className="relative bg-[#DCFF5F] rounded-tl-xl rounded-tr-xl pt-10 px-8 h-full">
+                        <div className="relative bg-[#DCFF5F] rounded-xl pt-10 px-8 h-full">
                             <Image className="absolute top-0 left-0 w-full h-[70%]" src="/images/goalszigzagbk.png" alt="Goals Zigzag" width={1000} height={1000} />
-                            <div className="relative z-20 flex justify-between items-center">
+                            <div className="relative z-20 flex justify-start gap-3 items-center">
                                 <div className="text-black font-light text-[30px] font-clashDisplay uppercase">Grow <br /> Traffic</div>
+                                <Grow01 />
                                 <div className="text-black font-bold text-[30px] font-clashDisplay uppercase">Grow <br /> Sales</div>
                             </div>
+                            <Grow02 />
                             <div className="relative z-20 text-black font-black text-[30px] font-clashDisplay uppercase text-center">Grow <br /> Business</div>
+                            <Grow03 />
                             <div className="relative z-20 flex flex-col gap-3 pt-10">
                                 <div className="flex items-center gap-2 bg-white rounded-full py-2 px-3" style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
                                     <div className="bg-black w-3 h-3 rounded-full"></div>
