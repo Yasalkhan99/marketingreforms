@@ -10,7 +10,15 @@ const QualityServicesCard = () => {
                 <div className="col-span-4 max-lg:col-span-6 max-md:col-span-12">
                     <div className="service-box cursor-pointer relative bg-[#B19AFD4D] rounded-3xl p-3 group">
                         <div className="bg-[#8865FA] flex items-center gap-3 p-4 rounded-full">
-                            <div className="bg-[#422D86] w-10 h-10 rounded-full"></div>
+                            <div className="bg-[#422D86] w-14 h-14 rounded-full flex items-center justify-center">
+                                <Image
+                                    className="w-[35px]"
+                                    src="/images/campaign.png"
+                                    alt="Social Media Marketing"
+                                    width={1000}
+                                    height={1000}
+                                />
+                            </div>
                             <div className="text-white text-[22px] max-2xl:text-[18px] max-xl:text-[14px] font-light font-clashDisplay">
                                 Social Media Marketing
                             </div>
@@ -66,7 +74,15 @@ const QualityServicesCard = () => {
                 <div className="col-span-4 max-lg:col-span-6 max-md:col-span-12">
                     <div className="service-box cursor-pointer relative bg-[#B19AFD4D] rounded-3xl p-3 group">
                         <div className="bg-[#8865FA] flex items-center gap-3 p-4 rounded-full">
-                            <div className="bg-[#422D86] w-10 h-10 rounded-full"></div>
+                            <div className="bg-[#422D86] w-14 h-14 rounded-full flex items-center justify-center">
+                                <Image
+                                    className="w-[35px]"
+                                    src="/images/ppc.png"
+                                    alt="Social Media Marketing"
+                                    width={1000}
+                                    height={1000}
+                                />
+                            </div>
                             <div className="text-white text-[22px] max-2xl:text-[18px] max-xl:text-[14px] font-light font-clashDisplay">
                                 pay Per Click
                             </div>
@@ -120,7 +136,15 @@ const QualityServicesCard = () => {
                 <div className="col-span-4 max-lg:col-span-6 max-md:col-span-12">
                     <div className="service-box cursor-pointer relative bg-[#B19AFD4D] rounded-3xl p-3 group">
                         <div className="bg-[#8865FA] flex items-center gap-3 p-4 rounded-full">
-                            <div className="bg-[#422D86] w-10 h-10 rounded-full"></div>
+                            <div className="bg-[#422D86] w-14 h-14 rounded-full flex items-center justify-center">
+                                <Image
+                                    className="w-[35px]"
+                                    src="/images/search-optimization.png"
+                                    alt="Social Media Marketing"
+                                    width={1000}
+                                    height={1000}
+                                />
+                            </div>
                             <div className="text-white text-[22px] max-2xl:text-[18px] max-xl:text-[14px] font-light font-clashDisplay">
                                 Search Engine Optimization
                             </div>
@@ -174,7 +198,15 @@ const QualityServicesCard = () => {
                 <div className="col-span-4 max-lg:col-span-6 max-md:col-span-12">
                     <div className="service-box cursor-pointer relative bg-[#B19AFD4D] rounded-3xl p-3 group">
                         <div className="bg-[#8865FA] flex items-center gap-3 p-4 rounded-full">
-                            <div className="bg-[#422D86] w-10 h-10 rounded-full"></div>
+                            <div className="bg-[#422D86] w-14 h-14 rounded-full flex items-center justify-center">
+                                <Image
+                                    className="w-[35px]"
+                                    src="/images/settings.png"
+                                    alt="Social Media Marketing"
+                                    width={1000}
+                                    height={1000}
+                                />
+                            </div>
                             <div className="text-white text-[22px] max-2xl:text-[18px] max-xl:text-[14px] font-light font-clashDisplay">
                                 Web Design & Development
                             </div>
@@ -228,7 +260,15 @@ const QualityServicesCard = () => {
                 <div className="col-span-4 max-lg:col-span-6 max-md:col-span-12">
                     <div className="service-box cursor-pointer relative bg-[#B19AFD4D] rounded-3xl p-3 group">
                         <div className="bg-[#8865FA] flex items-center gap-3 p-4 rounded-full">
-                            <div className="bg-[#422D86] w-10 h-10 rounded-full"></div>
+                            <div className="bg-[#422D86] w-14 h-14 rounded-full flex items-center justify-center">
+                                <Image
+                                    className="w-[35px]"
+                                    src="/images/advertisements.png"
+                                    alt="Social Media Marketing"
+                                    width={1000}
+                                    height={1000}
+                                />
+                            </div>
                             <div className="text-white text-[22px] max-2xl:text-[18px] max-xl:text-[14px] font-light font-clashDisplay">
                                 Google Display Ads
                             </div>
@@ -282,7 +322,15 @@ const QualityServicesCard = () => {
                 <div className="col-span-4 max-lg:col-span-6 max-md:col-span-12">
                     <div className="service-box cursor-pointer relative bg-[#B19AFD4D] rounded-3xl p-3 group">
                         <div className="bg-[#8865FA] flex items-center gap-3 p-4 rounded-full">
-                            <div className="bg-[#422D86] w-10 h-10 rounded-full"></div>
+                            <div className="bg-[#422D86] w-14 h-14 rounded-full flex items-center justify-center">
+                                <Image
+                                    className="w-[35px]"
+                                    src="/images/kpi.png"
+                                    alt="Social Media Marketing"
+                                    width={1000}
+                                    height={1000}
+                                />
+                            </div>
                             <div className="text-white text-[22px] max-2xl:text-[18px] max-xl:text-[14px] font-light font-clashDisplay">
                                 Performance Marketing
                             </div>

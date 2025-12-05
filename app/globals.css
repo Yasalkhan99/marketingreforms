@@ -149,7 +149,7 @@ span {
     }
   }
 
-  @media (max-width: 1536px) {
+  @media (max-width: 1535px) {
     .circle-item {
       width: 78px !important;
       height: 80px !important;
@@ -334,6 +334,178 @@ span {
     .semi-circle img:nth-child(11) {
       transform: translate(1301%, 255%) !important;
     }
+  }
+
+  @media (max-width: 421px) {
+    .testimonial-circle {
+      height: 260px !important;
+    }
+
+    .circle-item {
+      width: 28px !important;
+      height: 30px !important;
+    }
+
+    .semi-circle img:nth-child(12) {
+      transform: translate(1323%, 110%) !important;
+    }
+
+    .semi-circle img:nth-child(6) {
+      transform: translate(542%, 801%) !important;
+    }
+
+    .semi-circle img:nth-child(7) {
+      transform: translate(765%, 798%) !important;
+    }
+
+    .semi-circle img:nth-child(8) {
+      transform: translate(970%, 720%) !important;
+    }
+
+    .semi-circle img:nth-child(9) {
+      transform: translate(1133%, 573%) !important;
+    }
+
+    .semi-circle img:nth-child(10) {
+      transform: translate(1246%, 410%) !important;
+    }
+
+    .semi-circle img:nth-child(11) {
+      transform: translate(1301%, 255%) !important;
+    }
+
+    .semi-circle img:nth-child(11) {
+      transform: translate(1301%, 255%) !important;
+    }
+  }
+
+  @media (max-width: 414px) {
+
+
+    .semi-circle img:nth-child(12) {
+      transform: translate(1293%, 110%) !important;
+    }
+
+    .semi-circle img:nth-child(6) {
+      transform: translate(542%, 801%) !important;
+    }
+
+    .semi-circle img:nth-child(7) {
+      transform: translate(765%, 798%) !important;
+    }
+
+    .semi-circle img:nth-child(8) {
+      transform: translate(970%, 720%) !important;
+    }
+
+    .semi-circle img:nth-child(9) {
+      transform: translate(1113%, 573%) !important;
+    }
+
+    .semi-circle img:nth-child(10) {
+      transform: translate(1206%, 410%) !important;
+    }
+
+    .semi-circle img:nth-child(11) {
+      transform: translate(1261%, 255%) !important;
+    }
+  }
+
+  @media (max-width: 394px) {
+
+    .semi-circle img:nth-child(12) {
+      transform: translate(1203%, 110%) !important;
+    }
+
+    .semi-circle img:nth-child(6) {
+      transform: translate(542%, 801%) !important;
+    }
+
+    .semi-circle img:nth-child(7) {
+      transform: translate(715%, 798%) !important;
+    }
+
+    .semi-circle img:nth-child(8) {
+      transform: translate(900%, 720%) !important;
+    }
+
+    .semi-circle img:nth-child(9) {
+      transform: translate(1033%, 573%) !important;
+    }
+
+    .semi-circle img:nth-child(10) {
+      transform: translate(1136%, 410%) !important;
+    }
+
+    .semi-circle img:nth-child(11) {
+      transform: translate(1179%, 255%) !important;
+    }
+  }
+
+  @media (max-width: 376px) {
+
+    .semi-circle img:nth-child(12) {
+      transform: translate(1156%, 110%) !important;
+    }
+
+    .semi-circle img:nth-child(6) {
+      transform: translate(542%, 801%) !important;
+    }
+
+    .semi-circle img:nth-child(7) {
+      transform: translate(715%, 798%) !important;
+    }
+
+    .semi-circle img:nth-child(8) {
+      transform: translate(880%, 720%) !important;
+    }
+
+    .semi-circle img:nth-child(9) {
+      transform: translate(1003%, 573%) !important;
+    }
+
+    .semi-circle img:nth-child(10) {
+      transform: translate(1076%, 410%) !important;
+    }
+
+    .semi-circle img:nth-child(11) {
+      transform: translate(1131%, 255%) !important;
+    }
+  }
+
+  @media (max-width: 365px) {
+
+    .semi-circle img:nth-child(12) {
+      transform: translate(1124%, 110%) !important;
+    }
+
+    .semi-circle img:nth-child(6) {
+      transform: translate(462%, 801%) !important;
+  }
+
+    .semi-circle img:nth-child(7) {
+      transform: translate(675%, 798%) !important;
+    }
+
+    .semi-circle img:nth-child(8) {
+      transform: translate(850%, 720%) !important;
+    }
+
+    .semi-circle img:nth-child(9) {
+      transform: translate(953%, 573%) !important;
+    }
+
+    .semi-circle img:nth-child(10) {
+      transform: translate(1036%, 410%) !important;
+    }
+
+    .semi-circle img:nth-child(11) {
+      transform: translate(1091%, 255%) !important;
+    }
+
+    .semi-circle img:nth-child(5) {
+      transform: translate(290%, 724%) !important;
+  }
   }
 }
 
