@@ -308,7 +308,12 @@ export default function AboutPage() {
       </div>
       
       {/* Main About Us Content */}
-      <AboutUs />
+      <AboutUs 
+        backgroundText="Our Vision"
+        leftHeading="Our Vision"
+        rightHeading="Why Are We Your Best Bet?"
+        showButton={false}
+      />
       
       {/* Digital Marketing Strip */}
       <MarketingStrip />

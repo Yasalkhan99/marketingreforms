@@ -9,7 +9,12 @@ import PointerGlowText from "../pointer-glow-text";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AboutUs = () => {
+const AboutUs = ({ 
+    backgroundText = "About Us",
+    leftHeading = null,
+    rightHeading = "Want to know who we are?",
+    showButton = true 
+}) => {
     const containerRef = useRef(null);
     const container2Ref = useRef(null);
 
@@ -149,15 +154,24 @@ const AboutUs = () => {
                         alignItems: "center",
                     }}
                 >
-                    <PointerGlowText text="About Us" className="2xl:!text-[90%] max-2xl:!text-[80%] max-xl:!text-[70%] max-lg:!text-[60%] max-md:!text-[42%] max-sm:!text-[35%]" />
+                    <PointerGlowText text={backgroundText} className="2xl:!text-[90%] max-2xl:!text-[80%] max-xl:!text-[70%] max-lg:!text-[60%] max-md:!text-[42%] max-sm:!text-[35%]" />
                 </div>
             </div>
             <div className="container relative z-20">
-                <div className="flex items-center justify-between">
-                    <div className="text-white font-normal text-[22px] font-satoshi italic max-md:text-[14px]">Want to know who we are?</div>
-                    <div>
-                        <Button text="Learn More" />
+                <div className={`flex items-center ${leftHeading ? 'justify-between' : 'justify-between'} max-md:flex-col max-md:gap-4`}>
+                    {leftHeading && (
+                        <div className="text-primary text-[48px] max-lg:text-[36px] max-md:text-[28px] font-clashDisplay font-bold">
+                            {leftHeading}
+                        </div>
+                    )}
+                    <div className="text-white font-normal text-[22px] max-lg:text-[18px] max-md:text-[14px] font-satoshi italic">
+                        {rightHeading}
                     </div>
+                    {showButton && !leftHeading && (
+                        <div>
+                            <Button text="Learn More" />
+                        </div>
+                    )}
                 </div>
                 <div className="relative pt-8 mt-10">
                     <Image className="absolute top-0 left-0 w-full h-full z-10 backdrop-blur-sm pointer-events-none" src="/images/aboutbk.png" alt="About Us" width={1000} height={1000} />
