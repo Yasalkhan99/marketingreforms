@@ -21,14 +21,21 @@ const HeroSection = () => {
   const powRightTextRef = useRef(null);
 
   useEffect(() => {
-    document.fonts.ready.then(() => {
+    let split1, split2, tl1, tl2;
+    let isMounted = true;
+
+    const initAnimation = async () => {
+      await document.fonts.ready;
+      
+      if (!isMounted) return;
+
       /** -------- FIRST BLOCK ANIMATION -------- */
-      const split1 = new SplitText(textRef.current, {
+      split1 = new SplitText(textRef.current, {
         type: "words",
         wordsClass: "word++",
       });
 
-      const tl1 = gsap.timeline();
+      tl1 = gsap.timeline();
 
       // Words
       tl1.from(split1.words, {
@@ -64,12 +71,12 @@ const HeroSection = () => {
       );
 
       /** -------- SECOND BLOCK ANIMATION (with delay) -------- */
-      const split2 = new SplitText(powTextRef.current, {
+      split2 = new SplitText(powTextRef.current, {
         type: "words",
         wordsClass: "word++",
       });
 
-      const tl2 = gsap.timeline({ delay: 1.2 }); // 👈 ADD DELAY HERE
+      tl2 = gsap.timeline({ delay: 1.2 });
 
       // Words ("A Powerful")
       tl2.from(split2.words, {
@@ -103,7 +110,37 @@ const HeroSection = () => {
         },
         "-=0.2"
       );
-    });
+    };
+
+    initAnimation();
+
+    // Cleanup function - runs ALWAYS when component unmounts
+    return () => {
+      isMounted = false;
+      if (tl1) {
+        tl1.kill();
+        tl1 = null;
+      }
+      if (tl2) {
+        tl2.kill();
+        tl2 = null;
+      }
+      if (split1) {
+        split1.revert();
+        split1 = null;
+      }
+      if (split2) {
+        split2.revert();
+        split2 = null;
+      }
+      // Clear any remaining GSAP inline styles
+      if (textRef.current) gsap.set(textRef.current, { clearProps: "all" });
+      if (svgRef.current) gsap.set(svgRef.current, { clearProps: "all" });
+      if (withRef.current) gsap.set(withRef.current, { clearProps: "all" });
+      if (powTextRef.current) gsap.set(powTextRef.current, { clearProps: "all" });
+      if (powSvgRef.current) gsap.set(powSvgRef.current, { clearProps: "all" });
+      if (powRightTextRef.current) gsap.set(powRightTextRef.current, { clearProps: "all" });
+    };
   }, []);
 
   return (

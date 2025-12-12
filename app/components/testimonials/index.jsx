@@ -98,7 +98,7 @@ const Testimonials = () => {
               <img
                 key={index}
                 src={src}
-                className={`circle-item cursor-pointer transition-all duration-200 
+                className={`circle-item cursor-pointer transition-all duration-300 hover:brightness-125 hover:shadow-[0_0_20px_rgba(220,255,95,0.6)]
                   ${activeIndex === index ? "border-2 border-primary" : "border-0"}
                 `}
                 onClick={() => setActiveIndex(index)}

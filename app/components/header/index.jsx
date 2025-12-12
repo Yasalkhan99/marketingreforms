@@ -6,9 +6,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MenuIcon from "./svg/menu-icon";
 import CrossIcon from "./svg/cross-icon";
+import ContactPopup from "../contact-popup";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [openContactPopup, setOpenContactPopup] = useState(false);
   const pathname = usePathname();
   const navItems = [
     { label: "Home", path: "/" },
@@ -70,13 +72,19 @@ const Header = () => {
           })}
         </div>
         <div className="flex items-center gap-2">
-          <Button text="Contact Us" />
+          <div onClick={() => setOpenContactPopup(true)}>
+            <Button text="Contact Us" />
+          </div>
           <MenuIcon
             onClick={toggleMenu}
             className="text-white hidden max-lg:block cursor-pointer"
           />
         </div>
       </div>
+      <ContactPopup 
+        isOpen={openContactPopup} 
+        onClose={() => setOpenContactPopup(false)} 
+      />
     </>
   );
 };

@@ -32,8 +32,14 @@ body {
   color: var(--foreground);
 }
 
-span {
-  text-transform: lowercase !important;
+/* NO global lowercase - causes too many issues with animations */
+
+/* Lowercase only for specific components that need it */
+/* Add specific classes where lowercase is actually needed */
+
+/* Preserve original case for About Us animated text */
+.animate span {
+  text-transform: none !important;
 }
 
 @layer utilities {
@@ -620,6 +626,19 @@ span {
     opacity: 0;
     transform: scaleY(0.5);
   }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }
 
 
