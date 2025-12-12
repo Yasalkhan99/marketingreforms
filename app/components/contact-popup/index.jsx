@@ -6,6 +6,14 @@ const ContactPopup = ({ isOpen, onClose }) => {
     const popupRef = useRef(null);
     const overlayRef = useRef(null);
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
 
     useEffect(() => {
         if (isOpen) {
@@ -35,17 +43,50 @@ const ContactPopup = ({ isOpen, onClose }) => {
             ease: "power2.in",
             onComplete: () => {
                 setSubmitted(false);
+                setError('');
+                setFormData({ name: '', email: '', phone: '', message: '' });
                 onClose();
             }
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setSubmitted(true);
-        setTimeout(() => {
-            handleClose();
-        }, 2000);
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Failed to send message');
+            }
+
+            setSubmitted(true);
+            setTimeout(() => {
+                handleClose();
+                // Reset form
+                setFormData({ name: '', email: '', phone: '', message: '' });
+            }, 2000);
+        } catch (err) {
+            setError(err.message || 'Something went wrong. Please try again.');
+            setLoading(false);
+        }
+    };
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
     };
 
     if (!isOpen) return null;
@@ -83,38 +124,61 @@ const ContactPopup = ({ isOpen, onClose }) => {
 
                         {/* Form - Compact */}
                         <form onSubmit={handleSubmit} className="space-y-3">
+                            {error && (
+                                <div className="bg-red-500/10 border border-red-500/30 text-red-400 text-[12px] px-4 py-2 rounded-xl">
+                                    {error}
+                                </div>
+                            )}
+                            
                             <input
                                 type="text"
+                                name="name"
                                 placeholder="Your Name"
+                                value={formData.name}
+                                onChange={handleChange}
                                 className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-purple-400/10 text-white text-[14px] placeholder:text-gray-500 font-satoshi focus:outline-none focus:border-primary/50 transition-all duration-300"
                                 required
+                                disabled={loading}
                             />
 
                             <input
                                 type="email"
+                                name="email"
                                 placeholder="Email Address"
+                                value={formData.email}
+                                onChange={handleChange}
                                 className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-purple-400/10 text-white text-[14px] placeholder:text-gray-500 font-satoshi focus:outline-none focus:border-primary/50 transition-all duration-300"
                                 required
+                                disabled={loading}
                             />
 
                             <input
                                 type="tel"
+                                name="phone"
                                 placeholder="Phone (Optional)"
+                                value={formData.phone}
+                                onChange={handleChange}
                                 className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-purple-400/10 text-white text-[14px] placeholder:text-gray-500 font-satoshi focus:outline-none focus:border-primary/50 transition-all duration-300"
+                                disabled={loading}
                             />
 
                             <textarea
+                                name="message"
                                 placeholder="Your Message"
                                 rows="3"
+                                value={formData.message}
+                                onChange={handleChange}
                                 className="w-full px-4 py-2.5 rounded-xl bg-white/5 border border-purple-400/10 text-white text-[14px] placeholder:text-gray-500 font-satoshi focus:outline-none focus:border-primary/50 transition-all duration-300 resize-none"
                                 required
+                                disabled={loading}
                             ></textarea>
 
                             <button
                                 type="submit"
-                                className="w-full py-3 rounded-xl bg-primary hover:bg-primary/90 text-black font-satoshi font-bold text-[14px] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] mt-2"
+                                disabled={loading}
+                                className="w-full py-3 rounded-xl bg-primary hover:bg-primary/90 text-black font-satoshi font-bold text-[14px] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] mt-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                             >
-                                Send Message
+                                {loading ? 'Sending...' : 'Send Message'}
                             </button>
                         </form>
 
