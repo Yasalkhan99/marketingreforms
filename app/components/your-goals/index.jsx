@@ -18,7 +18,7 @@ const YourGoals = () => {
                 <div className="flex items-center justify-between pb-16 max-sm:pb-4 max-md:flex-col max-md:gap-2">
                     <div className="text-white font-normal text-[22px] font-satoshi italic max-lg:text-[18px] max-md:text-[14px]">Marketing that Actually Works</div>
                     <div className="text-primary text-[38px] font-clashDisplay max-lg:text-[28px] max-md:text-[22px]">
-                        accomplish your goals!
+                        Reform With Us!
                     </div>
                 </div>
                 <div className="grid grid-cols-12 gap-4">
@@ -30,9 +30,9 @@ const YourGoals = () => {
                                 <Grow01 />
                                 <div className="text-black font-bold text-[30px] max-xl:text-[22px] font-clashDisplay uppercase">Grow <br /> Sales</div>
                             </div>
-                            <Grow02 className="w-full"/>
+                            <Grow02 className="w-full" />
                             <div className="relative z-20 text-black font-black text-[30px] max-xl:text-[22px] font-clashDisplay uppercase text-center">Grow <br /> Business</div>
-                            <Grow03 className="w-full"/>
+                            <Grow03 className="w-full" />
                             <div className="relative z-20 flex flex-col gap-3 pt-10 max-md:pt-0 max-md:pb-10">
                                 <div className="flex items-center gap-2 bg-white rounded-full py-2 px-3" style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
                                     <div className="bg-black w-3 h-3 rounded-full"></div>
@@ -48,7 +48,7 @@ const YourGoals = () => {
                                 </div>
                                 <div className="flex items-center gap-2 bg-white rounded-full py-2 px-3" style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
                                     <div className="bg-black w-3 h-3 rounded-full"></div>
-                                    <div className=" text-[18px] max-xl:text-[14px] font-satoshi capitalize">Strategy That Delivers Real Results</div>
+                                    <div className=" text-[18px] max-xl:text-[14px] font-satoshi capitalize">Strategy that simply works</div>
                                 </div>
                             </div>
                         </div>
@@ -124,11 +124,14 @@ const YourGoals = () => {
                                 </div>
                             </div>
                             <div className="bg-white rounded-2xl p-4 relative z-20">
-                                <div className="text-black text-[20px] max-xl:text-[16px] font-satoshi">
-                                    We’ve helped businesses grow on a global scale. With our dedicated team of professionals, we deliver highly creative and impactful campaigns by working closely with each client to understand and meet their goals.
+                                <div className="text-black text-[16px] max-xl:text-[16px] font-satoshi">
+                                    We’ve helped businesses grow on a global scale. With our dedicated team of professionals, we deliver highly creative and impactful campaigns. Our mission is to elevate your brand visibility and build meaningful connections across financial, cultural, and technological spaces for good.
+
                                 </div>
-                                <div className="text-black text-[20px] max-xl:text-[16px] font-satoshi">
-                                    Our mission is to elevate your brand visibility and build meaningful connections across financial, cultural, and technological spaces, ensuring your success in the digital era.
+                                <div className="flex flex-col gap-2 text-black text-[16px] max-xl:text-[16px] font-satoshi pt-2">
+                                    <div>• Instant Results</div>
+                                    <div>• Cohesive Branding</div>
+                                    <div>• Memorable Brand Image</div>
                                 </div>
                             </div>
                         </div>

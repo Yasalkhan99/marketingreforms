@@ -20,15 +20,15 @@ const Footer = () => {
     {
       title: "Legal",
       links: [
-        "Cookie Policy",
+        // "Cookie Policy",
         "Privacy Policy",
         "Terms & Conditions",
-        "Disclaimers",
+        // "Disclaimers",
       ],
     },
     {
       title: "Help",
-      links: ["Contact", "Support", "FAQ", "Connect"],
+      links: ["Contact", "Support", "FAQ"],
     },
   ];
 

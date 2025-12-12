@@ -6,9 +6,57 @@ import MarketingStrip from "@/components/marketing-strip";
 import AboutUs from "@/components/about-us";
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
+import GoolgeLogo from "@/components/about-svg/google";
+import Hubspot from "@/components/about-svg/hubspot";
+import BingLogo from "@/components/about-svg/bing";
+import YoutubeLogo from "@/components/about-svg/youtube";
 
 export default function AboutPage() {
   const items = ["About Us"];
+
+  const endGoals = [
+    {
+      title: "Your Goals Come First",
+      description:
+        "A lot of agencies focus on vanity metrics and call it a day. Not us. We dig deeper into how marketing truly impacts your entire business.",
+    },
+    {
+      title: "Strategy That Brings Sales",
+      description:
+        "If you want to stand out in ever-changing markets, you need think outside the box. We rethink the standard performance marketing playbook and design strategies made specifically for your industry’s real ROI issues.",
+    },
+    {
+      title: "Campaigns That Adapt as You Grow",
+      description:
+        "The market shifts, customers change, and goals evolve. Your campaigns should keep up. We help you adjust tactics, reallocate budget, and evolve your messaging for maximum returns and minimum wasted spending.",
+    },
+    {
+      title: "Top-Tier Performance",
+      description:
+        "We judge success by performance, period. Expect transparent communication, insightful reporting, and clean data that your sales team can actually use to close more deals.",
+    },
+    {
+      title: "Strategy First, Always",
+      description:
+        "Every successful collab starts with a clear understanding of business, its goals, and customers. We go through all of your competitors, evaluate market opportunities, and work on your strengths and weaknesses.",
+    },
+    {
+      title: "Top-Tier",
+      description:
+        "Fast, dependable, and easy to work with, Marketing Reform plugs right into your existing marketing efforts to make everything run smoother.",
+    },
+    {
+      title: "ROI as a Mindset",
+      description:
+        "We make every move in accordance with return on investment in mind. We set clear goals, take critical measures, refine, and repeat. It’s a performance-based cycle that is made to keep your results climbing on long-term basis.",
+    },
+    {
+      title: "Integrated Solutions",
+      description:
+        "One-off tactics always work, but integrated, cross-channel campaigns work incredibly better. Prospects mostly interact with your brand via different touchpoints.",
+    },
+  ]
+
   return (
     <>
       <Header />
@@ -43,21 +91,11 @@ export default function AboutPage() {
             {/* Google */}
             <div className="flex items-center justify-center">
               <div className="relative w-[280px] h-[280px] max-lg:w-[220px] max-lg:h-[220px] max-md:w-[160px] max-md:h-[160px] rounded-full bg-gradient-to-br from-[#8B7FD9] to-[#6B5FC7] flex items-center justify-center shadow-xl">
-                <div className="text-white text-[56px] max-lg:text-[42px] max-md:text-[28px] font-bold font-clashDisplay">
+                <div className="text-white text-[56px] max-lg:text-[42px] max-md:text-[28px] font-clashDisplay">
                   Google
                 </div>
-                <div className="absolute top-[12%] right-[12%] w-[70px] h-[70px] max-lg:w-[55px] max-lg:h-[55px] max-md:w-[40px] max-md:h-[40px] rounded-full bg-white shadow-lg flex items-center justify-center border-4 border-[#FFC107]">
-                  <span
-                    className="text-[32px] max-lg:text-[24px] max-md:text-[18px] font-bold"
-                    style={{
-                      background:
-                        "linear-gradient(to right, #4285F4, #EA4335, #FBBC05, #34A853)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    G
-                  </span>
+                <div className="absolute top-[12%] right-[12%] w-[70px] flex items-center justify-center">
+                  <GoolgeLogo />
                 </div>
               </div>
             </div>
@@ -65,17 +103,11 @@ export default function AboutPage() {
             {/* HubSpot */}
             <div className="flex items-center justify-center">
               <div className="relative w-[280px] h-[280px] max-lg:w-[220px] max-lg:h-[220px] max-md:w-[160px] max-md:h-[160px] rounded-full bg-gradient-to-br from-[#8B7FD9] to-[#6B5FC7] flex items-center justify-center shadow-xl">
-                <div className="text-white text-[56px] max-lg:text-[42px] max-md:text-[28px] font-bold font-clashDisplay">
+                <div className="text-white text-[56px] max-lg:text-[42px] max-md:text-[28px] font-clashDisplay">
                   HubSpot
                 </div>
-                <div className="absolute bottom-[12%] left-[12%] w-[70px] h-[70px] max-lg:w-[55px] max-lg:h-[55px] max-md:w-[40px] max-md:h-[40px] rounded-full bg-[#FF7A59] shadow-lg flex items-center justify-center border-4 border-[#FF5733]">
-                  <svg
-                    className="w-[35px] h-[35px] max-lg:w-[26px] max-lg:h-[26px] max-md:w-[20px] max-md:h-[20px]"
-                    viewBox="0 0 24 24"
-                    fill="white"
-                  >
-                    <path d="M18.7 8.7l-1.4-1.4c-.4-.4-1-.4-1.4 0l-7.6 7.6-3.6-3.6c-.4-.4-1-.4-1.4 0l-1.4 1.4c-.4.4-.4 1 0 1.4l5.7 5.7c.4.4 1 .4 1.4 0l9.7-9.7c.4-.4.4-1 0-1.4z" />
-                  </svg>
+                <div className="absolute bottom-[12%] left-[12%] w-[70px] flex items-center justify-center">
+                  <Hubspot />
                 </div>
               </div>
             </div>
@@ -83,13 +115,11 @@ export default function AboutPage() {
             {/* Bing */}
             <div className="flex items-center justify-center">
               <div className="relative w-[280px] h-[280px] max-lg:w-[220px] max-lg:h-[220px] max-md:w-[160px] max-md:h-[160px] rounded-full bg-gradient-to-br from-[#8B7FD9] to-[#6B5FC7] flex items-center justify-center shadow-xl">
-                <div className="text-white text-[56px] max-lg:text-[42px] max-md:text-[28px] font-bold font-clashDisplay">
+                <div className="text-white text-[56px] max-lg:text-[42px] max-md:text-[28px] font-clashDisplay">
                   Bing
                 </div>
-                <div className="absolute top-[12%] right-[12%] w-[70px] h-[70px] max-lg:w-[55px] max-lg:h-[55px] max-md:w-[40px] max-md:h-[40px] rounded-full bg-[#00D8FF] shadow-lg flex items-center justify-center border-4 border-[#0099CC]">
-                  <span className="text-white text-[32px] max-lg:text-[24px] max-md:text-[18px] font-bold">
-                    b
-                  </span>
+                <div className="absolute top-[12%] right-[12%] w-[70px] flex items-center justify-center">
+                  <BingLogo />
                 </div>
               </div>
             </div>
@@ -97,17 +127,11 @@ export default function AboutPage() {
             {/* YouTube */}
             <div className="flex items-center justify-center">
               <div className="relative w-[280px] h-[280px] max-lg:w-[220px] max-lg:h-[220px] max-md:w-[160px] max-md:h-[160px] rounded-full bg-gradient-to-br from-[#8B7FD9] to-[#6B5FC7] flex items-center justify-center shadow-xl">
-                <div className="text-white text-[56px] max-lg:text-[42px] max-md:text-[28px] font-bold font-clashDisplay">
+                <div className="text-white text-[56px] max-lg:text-[42px] max-md:text-[28px] font-clashDisplay">
                   YouTube
                 </div>
-                <div className="absolute bottom-[12%] right-[12%] w-[70px] h-[70px] max-lg:w-[55px] max-lg:h-[55px] max-md:w-[40px] max-md:h-[40px] rounded-full bg-[#FF0000] shadow-lg flex items-center justify-center border-4 border-[#CC0000]">
-                  <svg
-                    className="w-[40px] h-[40px] max-lg:w-[30px] max-lg:h-[30px] max-md:w-[22px] max-md:h-[22px]"
-                    viewBox="0 0 24 24"
-                    fill="white"
-                  >
-                    <path d="M10 8.64L15.27 12 10 15.36V8.64M8 5v14l11-7L8 5z" />
-                  </svg>
+                <div className="absolute bottom-[12%] right-[12%] w-[70px]  flex items-center justify-center">
+                  <YoutubeLogo />
                 </div>
               </div>
             </div>
@@ -134,6 +158,40 @@ export default function AboutPage() {
         rightHeading="Why Are We Your Best Bet?"
         showButton={false}
       />
+
+      <div className="relative pb-18">
+        <div className="absolute top-0 left-0 w-full h-full">
+          <ShootingStarsBackground starCount={3} />
+        </div>
+        <div className="relative z-20 container">
+          <div className="flex items-start justify-center">
+            <div className="text-primary text-[48px] max-lg:text-[36px] max-md:text-[28px] font-clashDisplay font-bold">
+              Our End Goal
+            </div>
+          </div>
+          <div className="font-satoshi text-[20px] text-center text-white">
+            Our research is built on real data, not assumptions. As an independent third party, we always focus on conducting all of our operation with honesty, and unbiased insights that both suppliers and customers’ trust.
+          </div>
+          <div className="grid grid-cols-12 gap-3 pt-10">
+            {endGoals.map((goal, index) => (
+              <div key={index} className="col-span-3">
+                <div className="gradient-border h-full">
+                  <div className="gradient-box h-full">
+                    <div className="text-[18px] font-clashDisplay font-bold pb-3">
+                      {goal.title}
+                    </div>
+
+                    <div className="text-[16px] font-satoshi">
+                      {goal.description}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
 
       {/* Digital Marketing Strip */}
       <MarketingStrip />

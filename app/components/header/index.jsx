@@ -16,7 +16,7 @@ const Header = () => {
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "Services", path: "/services" },
-    { label: "Our Clients", path: "/our-clients" },
+    // { label: "Our Clients", path: "/our-clients" },
     { label: "Careers", path: "/careers" },
     { label: "Testimonials", path: "/testimonials" },
   ];
@@ -43,7 +43,7 @@ const Header = () => {
             <div className="text-primary text-[18px] mb-6 font-satoshi text-center pb-2 border-b border-primary">Home</div>
             <div className="text-primary text-[18px] mb-6 font-satoshi text-center pb-2 border-b border-primary">About</div>
             <div className="text-primary text-[18px] mb-6 font-satoshi text-center pb-2 border-b border-primary">Services</div>
-            <div className="text-primary text-[18px] mb-6 font-satoshi text-center pb-2 border-b border-primary">Our Clients</div>
+            {/* <div className="text-primary text-[18px] mb-6 font-satoshi text-center pb-2 border-b border-primary">Our Clients</div> */}
             <div className="text-primary text-[18px] mb-6 font-satoshi text-center pb-2 border-b border-primary">Careers</div>
             <div className="text-primary text-[18px] mb-6 font-satoshi text-center pb-2 border-b border-primary">Testimonials</div>
           </div>

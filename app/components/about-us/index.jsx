@@ -176,12 +176,15 @@ const AboutUs = ({
                 <div className="relative pt-8 mt-10">
                     <Image className="absolute top-0 left-0 w-full h-full z-10 backdrop-blur-sm pointer-events-none" src="/images/aboutbk.png" alt="About Us" width={1000} height={1000} />
                     <div className="grid grid-cols-12 relative z-20">
-                        <div ref={containerRef} className="font-clashDisplay text-[34px] text-[#fff] col-span-10 text-center pb-16 mt-6 max-[520px]:!mt-0 max-xl:text-[24px] max-lg:text-[20px] max-md:text-[15px] max-[520px]:!text-[12px] max-[435px]:!text-[10px] max-[355px]:!text-[8px]">
+                        <div ref={containerRef} className="font-clashDisplay text-[32px] text-[#fff] col-span-10 text-left pl-12 pb-[200px] mt-6 max-[520px]:!mt-0 max-xl:text-[24px] max-lg:text-[20px] max-md:text-[15px] max-[520px]:!text-[12px] max-[435px]:!text-[10px] max-[355px]:!text-[8px]">
                             <div className="animate">
-                                <div>Marketing Reforms Strengthens Relationships With All</div>
-                                <div>Stakeholders—From Onboarding To Long-Term Success</div>
-                                <div>—Ensuring Sustainable Growth. We Continuously Evolve</div>
-                                <div>Our KPIs To Optimize Spending And Maximize Profitability.</div>
+                                <div>Marketing Reforms is a leading digital marketing specialist.</div>
+                                <div>No matter what issue you are facing, we have a knack for</div>
+                                <div>reforming brands overnight!</div>
+                                <div>Fix Broken Bonds With All Stackeholders</div>
+                                <div>Lead The Way From Onboarding To Set milestones</div>
+                                <div>Offer Growth That doesn't Fluctuate</div>
+                                <div>We Continuously Evolve, So You Can As Well</div>
                             </div>
                         </div>
                         <div ref={container2Ref} className="font-clashDisplay text-[34px] text-white col-span-9 col-start-4 max-xl:col-start-3 text-left pb-10 pt-10 max-xl:text-[24px] max-lg:text-[20px] max-md:text-[15px] max-[520px]:!text-[12px] max-[435px]:!text-[10px] max-[355px]:!text-[8px]">
