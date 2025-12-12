@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
           },
         ],
         destination: 'https://www.marketingreforms.com/:path*',
-        permanent: true,
+        permanent: true, // 301 redirect (SEO-friendly)
       },
     ];
   },

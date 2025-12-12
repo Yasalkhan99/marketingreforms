@@ -5,7 +5,8 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const hostname = request.headers.get('host') || '';
 
-  // Redirect non-www to www for marketingreforms.com
+  // Redirect non-www to www for marketingreforms.com (SEO-friendly)
+  // This ensures marketingreforms.com redirects to www.marketingreforms.com
   if (hostname === 'marketingreforms.com') {
     url.host = 'www.marketingreforms.com';
     return NextResponse.redirect(url, 301);
