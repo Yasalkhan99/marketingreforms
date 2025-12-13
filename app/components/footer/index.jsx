@@ -15,7 +15,18 @@ const Footer = () => {
         "Social Media Marketing",
         "Pay Per Click",
         "Search Engine Optimization",
+        "Web Design & Development",
+        "Google Display Ads",
+        "Performance Marketing",
       ],
+      routes: [
+        "/services/social-media-marketing",
+        "/services/pay-per-click",
+        "/services/search-engine-optimization",
+        "/services/web-design-development",
+        "/services/google-display-ads",
+        "/services/performance-marketing"
+      ]
     },
     {
       title: "Legal",
@@ -25,10 +36,15 @@ const Footer = () => {
         "Terms & Conditions",
         // "Disclaimers",
       ],
+      routes: [
+        "/privacy-policy",
+        "/terms-conditions"
+      ]
     },
     {
       title: "Help",
       links: ["Contact", "Support", "FAQ"],
+      routes: ["#", "#", "#"]
     },
   ];
 

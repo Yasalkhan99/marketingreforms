@@ -2,6 +2,7 @@
 import GridBackground from "../grid-background";
 import Image from "next/image";
 import ArrowIcon from "../common/button/svg/button-arrow-icon";
+import Link from "next/link";
 
 const QualityServicesCard = () => {
     return (
@@ -58,7 +59,7 @@ const QualityServicesCard = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="flex">
+                            <Link href="/services/social-media-marketing" className="flex">
                                 <button className="px-8 py-2 w-full max-lg:py-1.5 border border-primary rounded-full cursor-pointer max-lg:px-4 group-hover:bg-primary group-hover:border-primary transition duration-300">
                                     <div className="text-primary text-[16px] max-lg:text-[14px] font-satoshi group-hover:text-black transition duration-300">
                                         Learn More
@@ -67,7 +68,7 @@ const QualityServicesCard = () => {
                                 <div className="arrow-icon-container flex items-center justify-center bg-primary px-3 py-3 max-lg:py-1 cursor-pointer rounded-full">
                                     <ArrowIcon className="max-lg:w-[10px]" />
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -120,7 +121,7 @@ const QualityServicesCard = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="flex">
+                            <Link href="/services/pay-per-click" className="flex">
                                 <button className="px-8 py-2 w-full max-lg:py-1.5 border border-primary rounded-full cursor-pointer max-lg:px-4 group-hover:bg-primary group-hover:border-primary transition duration-300">
                                     <div className="text-primary text-[16px] max-lg:text-[14px] font-satoshi group-hover:text-black transition duration-300">
                                         Learn More
@@ -129,7 +130,7 @@ const QualityServicesCard = () => {
                                 <div className="arrow-icon-container flex items-center justify-center bg-primary px-3 py-3 max-lg:py-1 cursor-pointer rounded-full">
                                     <ArrowIcon className="max-lg:w-[10px]" />
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -182,7 +183,7 @@ const QualityServicesCard = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="flex">
+                            <Link href="/services/search-engine-optimization" className="flex">
                                 <button className="px-8 py-2 w-full max-lg:py-1.5 border border-primary rounded-full cursor-pointer max-lg:px-4 group-hover:bg-primary group-hover:border-primary transition duration-300">
                                     <div className="text-primary text-[16px] max-lg:text-[14px] font-satoshi group-hover:text-black transition duration-300">
                                         Learn More
@@ -191,7 +192,7 @@ const QualityServicesCard = () => {
                                 <div className="arrow-icon-container flex items-center justify-center bg-primary px-3 py-3 max-lg:py-1 cursor-pointer rounded-full">
                                     <ArrowIcon className="max-lg:w-[10px]" />
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -239,12 +240,12 @@ const QualityServicesCard = () => {
                             </div>
                             <div className="services-content absolute z-30 bottom-0 left-0 w-full h-full translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                                 <div className="h-full text-white text-[18px] max-xl:text-[14px] font-light font-satoshi p-3">
-                                    A website shouldn’t just capture attention — it should hold it. Its true purpose is to attract, engage, and guide users while clearly communicating your brand’s story, value, and personality.
+                                    A website shouldn't just capture attention — it should hold it. Its true purpose is to attract, engage, and guide users while clearly communicating your brand's story, value, and personality.
                                 </div>
                             </div>
                         </div>
                         <div>
-                            <div className="flex">
+                            <Link href="/services/web-design-development" className="flex">
                                 <button className="px-8 py-2 w-full max-lg:py-1.5 border border-primary rounded-full cursor-pointer max-lg:px-4 group-hover:bg-primary group-hover:border-primary transition duration-300">
                                     <div className="text-primary text-[16px] max-lg:text-[14px] font-satoshi group-hover:text-black transition duration-300">
                                         Learn More
@@ -253,7 +254,7 @@ const QualityServicesCard = () => {
                                 <div className="arrow-icon-container flex items-center justify-center bg-primary px-3 py-3 max-lg:py-1 cursor-pointer rounded-full">
                                     <ArrowIcon className="max-lg:w-[10px]" />
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -306,7 +307,7 @@ const QualityServicesCard = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="flex">
+                            <Link href="/services/google-display-ads" className="flex">
                                 <button className="px-8 py-2 w-full max-lg:py-1.5 border border-primary rounded-full cursor-pointer max-lg:px-4 group-hover:bg-primary group-hover:border-primary transition duration-300">
                                     <div className="text-primary text-[16px] max-lg:text-[14px] font-satoshi group-hover:text-black transition duration-300">
                                         Learn More
@@ -315,7 +316,7 @@ const QualityServicesCard = () => {
                                 <div className="arrow-icon-container flex items-center justify-center bg-primary px-3 py-3 max-lg:py-1 cursor-pointer rounded-full">
                                     <ArrowIcon className="max-lg:w-[10px]" />
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -368,7 +369,7 @@ const QualityServicesCard = () => {
                             </div>
                         </div>
                         <div>
-                            <div className="flex">
+                            <Link href="/services/performance-marketing" className="flex">
                                 <button className="px-8 py-2 w-full max-lg:py-1.5 border border-primary rounded-full cursor-pointer max-lg:px-4 group-hover:bg-primary group-hover:border-primary transition duration-300">
                                     <div className="text-primary text-[16px] max-lg:text-[14px] font-satoshi group-hover:text-black transition duration-300">
                                         Learn More
@@ -377,7 +378,7 @@ const QualityServicesCard = () => {
                                 <div className="arrow-icon-container flex items-center justify-center bg-primary px-3 py-3 max-lg:py-1 cursor-pointer rounded-full">
                                     <ArrowIcon className="max-lg:w-[10px]" />
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
