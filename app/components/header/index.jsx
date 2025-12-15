@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import HeaderLogo from "./svg/header-logo";
 import Button from "../common/button";
 import Link from "next/link";
@@ -7,13 +7,11 @@ import { usePathname } from "next/navigation";
 import MenuIcon from "./svg/menu-icon";
 import CrossIcon from "./svg/cross-icon";
 import ContactPopup from "../contact-popup";
-import gsap from "gsap";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [openContactPopup, setOpenContactPopup] = useState(false);
   const pathname = usePathname();
-  const headerRef = useRef(null);
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
@@ -26,23 +24,6 @@ const Header = () => {
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
-
-  useEffect(() => {
-    if (headerRef.current) {
-      gsap.from(headerRef.current, {
-        y: -100,
-        opacity: 0,
-        duration: 0.8,
-        ease: "back.out(1.7)",
-      });
-    }
-
-    return () => {
-      if (headerRef.current) {
-        gsap.set(headerRef.current, { clearProps: "all" });
-      }
-    };
-  }, []);
 
   return (
     <>
@@ -94,7 +75,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div ref={headerRef} className="absolute top-5 max-[530px]:top-0 left-[50%] z-30 translate-x-[-50%] w-full container flex items-center justify-between py-6">
+      <div className="absolute top-5 max-[530px]:top-0 left-[50%] z-30 translate-x-[-50%] w-full container flex items-center justify-between py-6">
         <HeaderLogo classsName="max-2xl:w-[250px] max-xl:w-[180px] max-lg:w-[210px] max-md:w-[160px] max-[370px]:!w-[120px]" />
         <div className="border border-[#524F69] rounded-full p-1 py-2 max-lg:hidden">
           {navItems.map((item) => {

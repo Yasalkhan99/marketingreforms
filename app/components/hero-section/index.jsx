@@ -63,26 +63,11 @@ const HeroSection = ({
     let isMounted = true;
 
     const initAnimation = async () => {
-      // Don't block on font loading - use timeout fallback for better FCP/LCP
-      // Wait max 50ms for fonts, then proceed regardless to improve LCP
-      const fontLoadPromise = document.fonts.ready;
-      const timeoutPromise = new Promise(resolve => setTimeout(resolve, 50));
-      await Promise.race([fontLoadPromise, timeoutPromise]);
+      await document.fonts.ready;
 
       if (!isMounted) return;
 
       /** -------- FIRST BLOCK ANIMATION -------- */
-      // Ensure content is visible immediately for LCP before animating
-      if (textRef.current) {
-        gsap.set(textRef.current, { opacity: 1, visibility: 'visible' });
-      }
-      if (svgRef.current) {
-        gsap.set(svgRef.current, { opacity: 1, visibility: 'visible' });
-      }
-      if (withRef.current) {
-        gsap.set(withRef.current, { opacity: 1, visibility: 'visible' });
-      }
-
       split1 = new SplitText(textRef.current, {
         type: "words",
         wordsClass: "word++",
@@ -90,25 +75,23 @@ const HeroSection = ({
 
       tl1 = gsap.timeline();
 
-      // Words - animate from slightly above, content already visible
+      // Words
       tl1.from(split1.words, {
-        y: -30,
+        y: -50,
         opacity: 0,
-        duration: 0.5, // Faster animation for better LCP
+        duration: 0.8,
         ease: "back.out(1.7)",
-        stagger: 0.15, // Faster stagger
-        immediateRender: false, // Don't hide initially
+        stagger: 0.3,
       });
 
       // SVG
       tl1.from(
         svgRef.current,
         {
-          y: -30,
+          y: -50,
           opacity: 0,
-          duration: 0.5,
+          duration: 0.8,
           ease: "back.out(1.7)",
-          immediateRender: false,
         },
         "-=0.3"
       );
@@ -117,53 +100,39 @@ const HeroSection = ({
       tl1.from(
         withRef.current,
         {
-          y: -30,
+          y: -50,
           opacity: 0,
-          duration: 0.5,
+          duration: 0.8,
           ease: "back.out(1.7)",
-          immediateRender: false,
         },
         "-=0.2"
       );
 
-      /** -------- SECOND BLOCK ANIMATION (with shorter delay) -------- */
-      // Ensure second block is visible immediately
-      if (powTextRef.current) {
-        gsap.set(powTextRef.current, { opacity: 1, visibility: 'visible' });
-      }
-      if (powSvgRef.current) {
-        gsap.set(powSvgRef.current, { opacity: 1, visibility: 'visible' });
-      }
-      if (powRightTextRef.current) {
-        gsap.set(powRightTextRef.current, { opacity: 1, visibility: 'visible' });
-      }
-
+      /** -------- SECOND BLOCK ANIMATION (with delay) -------- */
       split2 = new SplitText(powTextRef.current, {
         type: "words",
         wordsClass: "word++",
       });
 
-      tl2 = gsap.timeline({ delay: 0.3 }); // Reduced delay for faster LCP
+      tl2 = gsap.timeline({ delay: 1.2 });
 
       // Words ("A Powerful")
       tl2.from(split2.words, {
-        y: -30,
+        y: -50,
         opacity: 0,
-        duration: 0.5,
+        duration: 0.8,
         ease: "back.out(1.7)",
-        stagger: 0.15,
-        immediateRender: false,
+        stagger: 0.3,
       });
 
       // SVG icon
       tl2.from(
         powSvgRef.current,
         {
-          y: -30,
+          y: -50,
           opacity: 0,
-          duration: 0.5,
+          duration: 0.8,
           ease: "back.out(1.7)",
-          immediateRender: false,
         },
         "-=0.3"
       );
@@ -172,26 +141,23 @@ const HeroSection = ({
       tl2.from(
         powRightTextRef.current,
         {
-          y: -30,
+          y: -50,
           opacity: 0,
-          duration: 0.5,
+          duration: 0.8,
           ease: "back.out(1.7)",
-          immediateRender: false,
         },
         "-=0.2"
       );
 
       /** -------- PARAGRAPH ANIMATION (bottom to top) -------- */
       if (paraRef.current) {
-        gsap.set(paraRef.current, { opacity: 1, visibility: 'visible' });
         tl2.from(
           paraRef.current,
           {
-            y: 30,
+            y: 50,
             opacity: 0,
-            duration: 0.5,
+            duration: 0.8,
             ease: "back.out(1.7)",
-            immediateRender: false,
           },
           "-=0.2"
         );
@@ -199,15 +165,13 @@ const HeroSection = ({
 
       /** -------- BUTTON ANIMATION (bottom to top) -------- */
       if (buttonRef.current) {
-        gsap.set(buttonRef.current, { opacity: 1, visibility: 'visible' });
         tl2.from(
           buttonRef.current,
           {
-            y: 30,
+            y: 50,
             opacity: 0,
-            duration: 0.5,
+            duration: 0.8,
             ease: "back.out(1.7)",
-            immediateRender: false,
           },
           "-=0.2"
         );
